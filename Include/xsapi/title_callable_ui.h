@@ -427,7 +427,7 @@ public:
     /// result.err() contains the error based on what happened in the case of an error.
     /// </returns>
     _XSAPIIMP static pplx::task<xbox::services::xbox_live_result<void>>
-        show_friend_finder_ui();
+    show_friend_finder_ui();
 
     /// <summary>
     /// Invokes the Xbox App to show full user profile for the target user
@@ -437,7 +437,7 @@ public:
     /// result.err() contains the error based on what happened in the case of an error.
     /// </returns>
     _XSAPIIMP static pplx::task<xbox::services::xbox_live_result<void>>
-        show_user_profile_ui(_In_ const string_t& targetXboxUserId);
+    show_user_profile_ui(_In_ const string_t& targetXboxUserId);
 
     /// <summary>
     /// Invokes the Xbox App to show the title app for the calling application.
@@ -446,7 +446,7 @@ public:
     /// result.err() contains the error based on what happened in the case of an error.
     /// </returns>
     _XSAPIIMP static pplx::task<xbox::services::xbox_live_result<void>>
-        show_title_hub_ui();
+    show_title_hub_ui();
 
     /// <summary>
     /// Invokes the Xbox App to show the user settings
@@ -455,7 +455,7 @@ public:
     /// result.err() contains the error based on what happened in the case of an error.
     /// </returns>
     _XSAPIIMP static pplx::task<xbox::services::xbox_live_result<void>>
-        show_user_settings_ui();
+    show_user_settings_ui();
 #endif
 
 #if defined(XSAPI_U)

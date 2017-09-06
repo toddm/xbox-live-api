@@ -366,7 +366,7 @@ title_callable_ui::show_profile_card_ui(
 #if UWP_API
     , _In_opt_ Windows::System::User^ user
 #endif
-)
+    )
 {
     auto task = pplx::create_task([targetXboxUserId
 #if UWP_API
@@ -675,7 +675,7 @@ title_callable_ui::show_friend_finder_ui(
 #if UWP_API
     _In_opt_ Windows::System::User^ user
 #endif
-)
+    )
 {
     auto task = pplx::create_task([
 #if UWP_API
@@ -726,7 +726,7 @@ title_callable_ui::show_friend_finder_ui(
 pplx::task<xbox::services::xbox_live_result<void>>
 title_callable_ui::show_user_profile_ui(
     _In_ const string_t& targetXboxUserId
-)
+    )
 {
     // Show the profile card tcui
     return show_profile_card_ui(targetXboxUserId);
@@ -737,7 +737,7 @@ title_callable_ui::show_title_hub_ui(
 #if UWP_API
     _In_opt_ Windows::System::User^ user
 #endif
-)
+    )
 {
     auto localConfig = xbox_system_factory::get_factory()->create_local_config();
     uint32_t titleId = localConfig->title_id();
@@ -795,7 +795,7 @@ title_callable_ui::show_user_settings_ui(
 #if UWP_API
     _In_opt_ Windows::System::User^ user
 #endif
-)
+    )
 {
     auto task = pplx::create_task([
 #if UWP_API
@@ -848,7 +848,7 @@ title_callable_ui::show_customize_user_profile_ui(
 #if UWP_API
     _In_opt_ Windows::System::User^ user
 #endif
-)
+    )
 {
     auto task = pplx::create_task([
 #if UWP_API
@@ -907,7 +907,7 @@ title_callable_ui::show_friend_finder_ui()
     options->TargetApplicationPackageFamilyName = XBOX_APP_PFN;
 
     auto task = pplx::create_task(Windows::System::Launcher::LaunchUriAsync(uri, options))
-        .then([](bool result)
+    .then([](bool result)
     {
         if (result)
         {
@@ -927,7 +927,7 @@ title_callable_ui::show_friend_finder_ui()
 pplx::task<xbox::services::xbox_live_result<void>>
 title_callable_ui::show_user_profile_ui(
     _In_ const string_t& targetXboxUserId
-)
+    )
 {
     // Show the profile card tcui
     return show_profile_card_ui(targetXboxUserId);
@@ -951,7 +951,7 @@ title_callable_ui::show_title_hub_ui()
     options->TargetApplicationPackageFamilyName = XBOX_APP_PFN;
 
     auto task = pplx::create_task(Windows::System::Launcher::LaunchUriAsync(uri, options))
-        .then([](bool result)
+    .then([](bool result)
     {
         if (result)
         {
@@ -979,7 +979,7 @@ title_callable_ui::show_user_settings_ui()
     options->TargetApplicationPackageFamilyName = XBOX_APP_PFN;
 
     auto task = pplx::create_task(Windows::System::Launcher::LaunchUriAsync(uri, options))
-        .then([](bool result)
+    .then([](bool result)
     {
         if (result)
         {
